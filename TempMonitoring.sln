@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempMonitoring", "TempMonitoring\TempMonitoring.csproj", "{2CAFD04E-CD9F-4D61-9121-197B0161D5EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KoderHack.WPF.Controls", "ContentTickerSrc\KoderHack.WPF.Controls\KoderHack.WPF.Controls.csproj", "{0880D44F-E0F3-4CF3-A811-08E6540D6678}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CAFD04E-CD9F-4D61-9121-197B0161D5EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CAFD04E-CD9F-4D61-9121-197B0161D5EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CAFD04E-CD9F-4D61-9121-197B0161D5EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CAFD04E-CD9F-4D61-9121-197B0161D5EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0880D44F-E0F3-4CF3-A811-08E6540D6678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0880D44F-E0F3-4CF3-A811-08E6540D6678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0880D44F-E0F3-4CF3-A811-08E6540D6678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0880D44F-E0F3-4CF3-A811-08E6540D6678}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

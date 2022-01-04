@@ -1,0 +1,24 @@
+﻿<Window x:Class="TempMonitoring.ShowLocationsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Справочник мест" 
+        Style="{StaticResource ListWindowStyle}"
+        Loaded="Window_Loaded"
+        Closed="Window_Closed">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Name="menu" Margin="5" Grid.Column="0" Grid.Row="0">
+            <MenuItem Name="InsertButton" Style="{StaticResource InsertButtonStyle}" Click="InsertButton_Click"></MenuItem>
+            <MenuItem Name="UpdateButton" Style="{StaticResource UpdateMenuItemStyle}" Click="UpdateButton_Click"></MenuItem>
+            <MenuItem Name="DeleteButton" Style="{StaticResource DeleteMenuItemStyle}" Click="DeleteButton_Click"></MenuItem>
+            <MenuItem Name="ResetButton"  Style="{StaticResource ReloadMenuItemStyle}" Click="ResetButton_Click"></MenuItem>
+        </Menu>
+        <DataGrid Name="LocationsDataGrid" Margin="5" Grid.Column="0" Grid.Row="1" IsReadOnly="True"></DataGrid>
+    </Grid>
+</Window>

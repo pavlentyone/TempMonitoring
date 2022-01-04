@@ -1,0 +1,18 @@
+﻿<Window x:Class="TempMonitoring.MessageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WarningMessageWindow" Height="300" Width="300"
+        Loaded="Window_Loaded"
+        Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Name="MessageTextBlock" Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
+        <Button Name="OkButton" Style="{StaticResource OkButtonStyle}" Grid.Column="0" Grid.Row="4" Margin="10" Click="OkButton_Click"></Button>
+    </Grid>
+</Window>

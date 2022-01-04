@@ -1,0 +1,29 @@
+﻿<Window x:Class="TempMonitoring.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Окно авторизации" Height="200" Width="400"
+        MinHeight="200" MinWidth="300"
+        Style="{DynamicResource LoginWindowStyle}"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Style="{StaticResource UserLabelStyle}" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <TextBox Name="LoginTextBox" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Stretch" BorderBrush="Black"/>
+        <TextBlock Name="LoginErrorLabel" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" TextWrapping="Wrap" HorizontalAlignment="Center"></TextBlock>
+        <Label Style="{StaticResource PasswordLabelStyle}" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+        <PasswordBox Name="PasswordBox" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" BorderBrush="Black"/>
+        <TextBlock Name="PasswordErrorLabel" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" TextWrapping="Wrap" HorizontalAlignment="Center"></TextBlock>
+        <Button Name="OkButton" Content="Подтвердить" IsDefault="True" MaxHeight="30" MaxWidth="150" Grid.Column="0" Grid.Row="4" Margin="3" Click="OkButton_Click"></Button>
+        <Button Name="CancelButton" Content="Отменить" IsCancel="True" MaxHeight="30" MaxWidth="150" Grid.Column="1" Grid.Row="4" Margin="3"></Button>
+    </Grid>
+</Window>

@@ -1,0 +1,117 @@
+﻿<Window x:Class="TempMonitoring.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:local="clr-namespace:TempMonitoring"
+        xmlns:cust="clr-namespace:KoderHack.WPF.Controls;assembly=KoderHack.WPF.Controls"
+        Title="Мониторинг температуры рельс" Height="600" Width="1000"
+        Style="{DynamicResource MainWindowStyle}"
+        Loaded="Window_Loaded"
+        FontSize="16">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="298*"></ColumnDefinition>
+            <ColumnDefinition Width="597*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <MenuItem Name="DirectoryMenuItem" Style="{DynamicResource ListButtonStyle}" FontSize="16" Header="Справочники">
+                <MenuItem Name="ShowUsersMenuItem" Style="{DynamicResource ListButtonStyle}" FontSize="16" Header="Пользователи" Click="ShowUsersMenuItem_Click"></MenuItem>
+                <MenuItem Name="ShowLocationsMenuItem" Style="{DynamicResource ListButtonStyle}" FontSize="16" Header="Узлы" Click="ShowLocationsMenuItem_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Name="SettingsMenuItem" FontSize="16" Header="Настройки" Click="SettingsMenuItem_Click">
+            </MenuItem>
+        </Menu>
+        <TextBlock Name="ShowRoleTextBlock" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="5" Style="{DynamicResource RegularTextBlockStyle}"></TextBlock>
+        <TreeView Grid.Column="0" Grid.Row="2" Name="RolesTreeView" SelectedItemChanged="RolesTreeView_SelectedItemChanged">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Path=Children}">
+                    <TextBlock Text="{Binding Text}" ToolTip="{Binding ToolTip}" Background="{Binding BackColor}"></TextBlock>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+        <GridSplitter Grid.Column="0" Grid.Row="2" Margin="-5" Background="Transparent" Width="10"/>
+        <TabControl Name="InfoTabControl" Grid.Column="1" Grid.Row="2" SelectionChanged="InfoTabControl_SelectionChanged">
+            <TabItem Name="TempTabItem" Header="Температуры">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Name="TempGrahpColumnDefinition" Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Name="TempTableColumnDefinition" Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Name="GraphMessageTextBlock" Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Style="{DynamicResource RegularTextBlockStyle}"></TextBlock>
+                    
+                    <oxy:PlotView Name="OxyGraph" Grid.Row="1" Grid.Column="0"></oxy:PlotView>
+                    <DataGrid Name="TempDataGrid" Grid.Row="1" Grid.Column="1"></DataGrid>
+                    <GridSplitter Grid.Column="0" Grid.Row="1" Width="10" Margin="-5" Background="Transparent"></GridSplitter>
+                    <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal">
+                        <Border BorderThickness="2" BorderBrush="Black">
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox Name="TempGraphRadioButton" Content="График" VerticalAlignment="Center" Margin="5" IsChecked="True" Checked="TempGraphRadioButton_Checked" Unchecked="TempGraphRadioButton_Checked"></CheckBox>
+                                <CheckBox Name="TempTableRadioButton" Content="Таблица" VerticalAlignment="Center" Margin="5" Checked="TempGraphRadioButton_Checked" Unchecked="TempGraphRadioButton_Checked"></CheckBox>
+                            </StackPanel>
+                        </Border>
+                        <Border BorderThickness="2" BorderBrush="Black">
+                            <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Период: " VerticalAlignment="Center" Margin="5"></TextBlock>
+                        <ComboBox Name="PeriodComboBox" SelectedIndex="0" VerticalContentAlignment="Center" Margin="5" SelectionChanged="PeriodComboBox_SelectionChanged">
+                            <ComboBoxItem Content="День" Name="DayComboBoxItem"></ComboBoxItem>
+                            <ComboBoxItem Content="Вчера" Name="YeasterdayComboBoxItem"></ComboBoxItem>
+                            <ComboBoxItem Content="Неделю" Name="WeekComboBoxItem"></ComboBoxItem>
+                            <ComboBoxItem Content="Месяц" Name="MonthComboBoxItem"></ComboBoxItem>
+                                    <ComboBoxItem Content="Год" Name="YearComboBoxItem"></ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                        </Border>
+                        <Button Name="GraphUpdateButton" Content="Обновить" Margin="5" Click="GraphUpdateButton_Click"></Button>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            
+            <TabItem Name="MessagesTabItem" Header="Сообщения">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Name="MessagesInformationTextBlock" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center"></TextBlock>
+                    <DataGrid Name="MessagesDataGrid" Grid.Column="0" Grid.Row="1" Margin="5" IsReadOnly="True"></DataGrid>
+                    <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" >
+                            <CheckBox Name="UnreadMessagesRadioButton" Content="Непрочитанные" Margin="5" IsChecked="True" Unchecked="WarningRadioButton_Checked" Checked="WarningRadioButton_Checked"></CheckBox>
+                            <CheckBox Name="ReadMessagesRadioButton" Content="Прочитанные" Margin="5" Unchecked="WarningRadioButton_Checked" Checked="WarningRadioButton_Checked"></CheckBox>
+                            <ComboBox Name="MessagesPeriodComboBox" Margin="5" SelectedIndex="0" SelectionChanged="MessagesPeriodComboBox_SelectionChanged">
+                                <ComboBoxItem Name="WarningDayComboBoxItem" Content="День"></ComboBoxItem>
+                                <ComboBoxItem Name="WarningYesterdayComboBoxItem" Content="Вчера"></ComboBoxItem>
+                                <ComboBoxItem Name="WarningWeekComboBoxItem" Content="Неделю"></ComboBoxItem>
+                                <ComboBoxItem Name="WarningMonthComboBoxItem" Content="Месяц"></ComboBoxItem>
+                                <ComboBoxItem Name="WarningYearComboBoxItem" Content="Год"></ComboBoxItem>
+                            </ComboBox>
+                            <Button Name="UpdateWarningButton" Content="Обновить" Margin="5" Click="UpdateWarningButton_Click"></Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <cust:ContentTicker x:Name="contentTicker" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="4" Height="30"
+                             Rate="{Binding ElementName=speedSlider, Path=Value}" Direction="West">
+            <cust:ContentTicker.Content>
+                <TextBlock x:Name="sliderText" Text="{Binding ElementName=sampleText, Path=Text}" FontSize="16" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" />
+            </cust:ContentTicker.Content>
+        </cust:ContentTicker>
+    </Grid>
+</Window>

@@ -1,0 +1,178 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:loc="clr-namespace:TempMonitoring"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Image Name="ReportImage" x:Key="ReportImage" x:Shared="False" Height="26" Source="./Images/colored/files/report.png"></Image>
+    <Image Name="TableImage" x:Key="TableImage" x:Shared="False" Height="26" Source="./Images/colored/files/table.png"></Image>
+    <Image Name="FileImage" x:Key="FileImage" x:Shared="False" Height="26" Source="./Images/colored/file.png"></Image>
+    <Image Name="AddImage" x:Key="AddImage" x:Shared="False" Height="26" Source="./Images/colored/add.png"></Image>
+    <Image Name="DeleteImage" x:Key="DeleteImage" x:Shared="False" Height="26" Source="./Images/colored/delete2.png"></Image>
+    <Image Name="EditImage" x:Key="EditImage" x:Shared="False" Height="26" Source="./Images/colored/edit.png"></Image>
+    <Image Name="ListImage" x:Key="ListImage" x:Shared="False" Height="26" Source="./Images/colored/list.png"></Image>
+    <Image Name="ReloadImage" x:Key="ReloadImage" x:Shared="False" Height="26" Source="./Images/colored/reload.png"></Image>
+
+    <Style x:Key="LoginWindowStyle" TargetType="Window">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="Icon" Value="./Images/colored/key.png"></Setter>
+    </Style>
+    <Style x:Key="MainWindowStyle" TargetType="Window">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="Icon" Value="./Images/black-white robber.png"></Setter>
+    </Style>
+    <Style x:Key="ListWindowStyle" TargetType="Window">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="Icon" Value="./Images/colored/list.png"></Setter>
+    </Style>
+    <Style x:Key="InputWindowStyle" TargetType="Window">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="Icon" Value="./Images/colored/edit.png"></Setter>
+    </Style>
+
+    <Style x:Key="RegularTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16"></Setter>
+    </Style>
+    <Style x:Key="RegularLabelStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+    </Style>
+    <Style x:Key="UserLabelStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="Auto" MaxWidth="50" Source="./Images/colored/user.png"/>
+                        <TextBlock Text="Введите логин: " VerticalAlignment="Center" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="PasswordLabelStyle" TargetType="Label">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="Auto" MaxWidth="50" Source="./Images/colored/key.png"/>
+                        <TextBlock Text="Введите пароль: " VerticalAlignment="Center" Margin="5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ReportButtonStyle" TargetType="MenuItem">
+        <Setter Property="Icon" Value="{StaticResource ReportImage}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="Отчет" VerticalAlignment="Center"></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ExportButtonStyle" TargetType="MenuItem">
+        <Setter Property="Icon" Value="{StaticResource TableImage}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="Экспорт в Xml" VerticalAlignment="Center"></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FileButtonStyle" TargetType="MenuItem">
+        <Setter Property="Icon" Value="{StaticResource FileImage}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="Файл" VerticalAlignment="Center"></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ListButtonStyle" TargetType="MenuItem">
+        <Setter Property="Icon" Value="{StaticResource ListImage}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+    </Style>
+    <Style x:Key="InsertButtonStyle" TargetType="MenuItem">
+        <Setter Property="Icon" Value="{StaticResource AddImage}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="Добавить" VerticalAlignment="Center"></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="DeleteMenuItemStyle" TargetType="MenuItem">
+        <Setter Property="Icon" Value="{StaticResource DeleteImage}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="Удалить" VerticalAlignment="Center"></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="UpdateMenuItemStyle" TargetType="MenuItem">
+        <Setter Property="Icon" Value="{StaticResource EditImage}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="Изменить" VerticalAlignment="Center"></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ReloadMenuItemStyle" TargetType="MenuItem">
+        <Setter Property="Icon" Value="{StaticResource ReloadImage}"></Setter>
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="Обновить" VerticalAlignment="Center"></TextBlock>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="OkButtonStyle" TargetType="Button">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <StackPanel Height="Auto" Orientation="Horizontal">
+                        <Image Height="Auto" Source="./Images/colored/ok.png"></Image>
+                        <TextBlock Text="Подтвердить" VerticalAlignment="Center" Padding="5"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="IsDefault" Value="True"></Setter>
+        <Setter Property="MaxHeight" Value="50"></Setter>
+        <Setter Property="MaxWidth" Value="200"></Setter>
+    </Style>
+    <Style x:Key="CancelButtonStyle" TargetType="Button">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="ContentTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <StackPanel Height="Auto" Orientation="Horizontal">
+                        <Image Height="Auto" Source="./Images/colored/cancel.png"></Image>
+                        <TextBlock Text="Отмена" VerticalAlignment="Center" Padding="5"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="IsCancel" Value="True"></Setter>
+        <Setter Property="MaxHeight" Value="50"></Setter>
+        <Setter Property="MaxWidth" Value="200"></Setter>
+    </Style>
+</ResourceDictionary>
