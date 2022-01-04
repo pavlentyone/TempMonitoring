@@ -1,0 +1,14 @@
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\bin\Debug\KoderHack.Demo.exe
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\bin\Debug\KoderHack.Demo.pdb
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\bin\Debug\KoderHack.WPF.Controls.dll
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\bin\Debug\KoderHack.WPF.Controls.pdb
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\obj\x86\Debug\KoderHack.Demo.csprojResolveAssemblyReference.cache
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\obj\x86\Debug\MainWindow.baml
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\obj\x86\Debug\MainWindow.g.cs
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\obj\x86\Debug\App.g.cs
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\obj\x86\Debug\KoderHack.Demo_MarkupCompile.cache
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\obj\x86\Debug\KoderHack.Demo.g.resources
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\obj\x86\Debug\KoderHack.Demo.Properties.Resources.resources
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\obj\x86\Debug\KoderHack.Demo.csproj.GenerateResource.Cache
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\obj\x86\Debug\KoderHack.Demo.exe
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.Demo\obj\x86\Debug\KoderHack.Demo.pdb

@@ -1,0 +1,12 @@
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\bin\Debug\KoderHack.WPF.Controls.dll
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\bin\Debug\KoderHack.WPF.Controls.pdb
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\obj\Debug\KoderHack.WPF.Controls.csprojResolveAssemblyReference.cache
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\obj\Debug\KoderHack.WPF.Controls_MarkupCompile.cache
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\obj\Debug\KoderHack.WPF.Controls_MarkupCompile.lref
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\obj\Debug\Themes\Generic.baml
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\obj\Debug\KoderHack.WPF.Controls.g.resources
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\obj\Debug\KoderHack.WPF.Controls.Properties.Resources.resources
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\obj\Debug\KoderHack.WPF.Controls.csproj.GenerateResource.Cache
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\obj\Debug\KoderHack.WPF.Controls.dll
+C:\Users\USeR-050716\Downloads\ContentTickerSrc\ContentTickerSrc\KoderHack.WPF.Controls\obj\Debug\KoderHack.WPF.Controls.pdb
